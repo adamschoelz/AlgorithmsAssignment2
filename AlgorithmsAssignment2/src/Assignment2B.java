@@ -25,7 +25,7 @@ public class Assignment2B {
 			}
 		}
 		
-		printList(palinList);
+		//printList(palinList);
 		return palinCount;
 	}
 	
@@ -46,8 +46,10 @@ public class Assignment2B {
 			if(i < str.length() -1 && str.charAt(i) == str.charAt(i + 1)){
 				expandAll(str, i, true, allPalin);
 			}
+			//System.out.println("Added: ");
+			//printList(allPalin);
 		}
-		printList(allPalin);
+		//printList(allPalin);
 		
 		return allPalin;
 	}
@@ -75,12 +77,13 @@ public class Assignment2B {
 			char ch2 = str.charAt(index + dist + 1 + (inbetween ? 1 : 0));
 			
 			
-			all.add(palin.toString());
+			//all.add(palin.toString());
 
 			if(ch1 == ch2){
 				palin.append(ch1);
 				palin.insert(0, ch2);
 				all.add(palin.toString());
+				System.out.println("Inserting " + palin.toString());
 			}
 			else{
 				//System.out.println("broken!");
@@ -88,6 +91,11 @@ public class Assignment2B {
 			}
 			dist++;
 
+		}
+		
+		if(index == 1){
+			System.out.println("at 1: " + " inbetwee: " + inbetween);
+			printList(all);
 		}
 		
 		//System.out.println(palin);
