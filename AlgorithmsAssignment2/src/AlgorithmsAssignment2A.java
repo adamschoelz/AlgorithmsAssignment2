@@ -2,21 +2,11 @@
 public class AlgorithmsAssignment2A {
 
 	public static void main(String[] args) {
-		System.out.println(makePalindrome("bababba"));
-
-	}
-	
-	public static boolean checkPalindrome(String str){
-		boolean toReturn = true;
+		Assignment2B palinfinder = new Assignment2B();
 		
-		for(int i = 0; i < str.length(); i++){
-			if(str.charAt(i) != str.charAt(str.length() - 1 - i)){
-				toReturn = false;
-				break;
-			}
-		}
+		//System.out.println(makePalindrome("bb"));
 		
-		return toReturn;
+		System.out.println(palinfinder.numPalindrome("bbb"));
 	}
 
 	public static String makePalindrome(String input) {
